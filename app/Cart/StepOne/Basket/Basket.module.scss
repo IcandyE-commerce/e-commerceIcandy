@@ -1,0 +1,98 @@
+.basket {
+  > h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #f0c14b;
+    padding-bottom: 10px;
+  }
+}
+
+.block {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+
+  .image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .details {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+
+      .productTitle {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .deleteIcon {
+        cursor: pointer;
+        color: #d32f2f;
+        font-size: 24px;
+
+        &:hover {
+          color: #ff5252;
+        }
+      }
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+
+      .number {
+        min-width: 60px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+
+      .price {
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  }
+}

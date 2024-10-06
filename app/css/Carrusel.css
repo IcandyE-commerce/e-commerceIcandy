@@ -1,0 +1,40 @@
+.carousel-image {
+    width: 75%;
+    height: 65vh;
+    object-fit: cover; 
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-image {
+      width: 83%;
+      height: 40vh; /* Ajusta la altura según tus necesidades */
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  }
+  
+.arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.prev-arrow {
+  left:13vw;
+}
+
+.next-arrow {
+  right: 13vw;
+}

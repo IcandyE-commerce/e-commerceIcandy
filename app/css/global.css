@@ -1,0 +1,55 @@
+@import "index.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+   color: var(--text-primary);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-primary);
+}
+
+h1, h2, h3, h4, h5{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    color: var(--text-primary);
+}
+a:hover{
+    color: var(--primary);
+}
+
+.footer{
+    background-color: #D1F1FF;
+}
+
+.IcandyLogo{
+    filter: drop-shadow(
+        0 0 10px rgba(163, 163, 163, 0.8)
+    )
+}
+
+.mensaje{
+    background-color: #FF008A;
+}
+
+.Corazones {
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+    object-fit: cover;
+    filter: brightness(0.8) blur(0.5px); 
+  }
+  
+  .menu-open {
+    filter: grayscale(100%);
+  }
+  

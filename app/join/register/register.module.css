@@ -1,0 +1,10 @@
+.signin{
+    width: 70%;
+}
+.signin h3 { 
+    margin-bottom: 20px;
+}
+.actions{
+    margin-top: 10px;
+    text-align: center;
+}

@@ -1,0 +1,122 @@
+
+.headerCart {
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  z-index: 5;
+  background-color: black;
+}
+
+.left {
+  width: 20%;
+
+  img {
+    height: 30px;
+  }
+}
+
+.center {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    &.active {
+      > span {
+        color: orange;
+      }
+      .number {
+        border-color: gray;
+      }
+    }
+
+    &.success .number {
+      border-color: gray;
+      color: gray;
+
+      i {
+        display: flex;
+        position: absolute;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.success .space {
+      background-color: gray;
+    }
+
+    > span {
+      color: gray;
+    }
+
+    .number {
+      border: 3px solid gray;
+      font-size: 12px;
+      border-radius: 100px;
+      height: 26px;
+      width: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 1px;
+      padding-top: 1px;
+      margin-right: 10px;
+
+      i {
+        display: none;
+      }
+    }
+
+    .space {
+      width: 100px;
+      height: 3px;
+      background-color: gray;
+      margin-left: 15px;
+      margin-right: 20px;
+    }
+
+    &:last-of-type .space {
+      display: none;
+    }
+  }
+}
+
+.right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  > i {
+    color: green;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid yellow;
+    padding-left: 10px;
+
+    > span {
+      &:first-of-type {
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      &:last-of-type {
+        color: gray;
+        font-size: 11px;
+        margin-top: -4px;
+      }
+    }
+  }
+}

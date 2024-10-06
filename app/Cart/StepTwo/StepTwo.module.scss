@@ -1,0 +1,33 @@
+.stepTwo {
+  display: flex;
+  width: 100%;
+  gap: 20px; // Añadimos un gap para un mejor espaciado entre los elementos
+}
+
+.center {
+  width: 65%;
+  padding-right: 20px;
+  background-color: #ffffff; // Fondo suave para diferenciar la sección
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera
+  border-radius: 10px; // Bordes redondeados
+  padding: 20px; // Añadimos padding para un mejor espaciado interno
+  transition: transform 0.3s ease; // Transición suave al hacer hover
+
+  &:hover {
+    transform: scale(1.02); // Efecto de zoom al hacer hover
+  }
+}
+
+.right {
+  width: 35%;
+  padding-left: 20px;
+  background-color: #fff; // Fondo blanco para contrastar
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera
+  border-radius: 10px; // Bordes redondeados
+  padding: 20px; // Añadimos padding para un mejor espaciado interno
+  transition: transform 0.3s ease; // Transición suave al hacer hover
+
+  &:hover {
+    transform: scale(1.02); // Efecto de zoom al hacer hover
+  }
+}

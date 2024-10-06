@@ -1,0 +1,14 @@
+
+.imagenesBanner {
+    filter: brightness(0.6) blur(0.5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .banner-item:hover .imagenesBanner {
+    transform: scale(1.02);
+    filter: brightness(0.8) blur(0.5px);
+  }
+
+.banner{
+  font-family:var(--font--lilita);
+}

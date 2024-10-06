@@ -1,0 +1,28 @@
+.fixed-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+@keyframes slide {
+    from {
+      transform: translateX(-50px); 
+      opacity: 0; 
+    }
+    to {
+      transform: translateX(0); 
+      opacity: 1; 
+    }
+  }
+  
+  .animate-slide {
+    animation: slide 1s ease-in-out; 
+  }
+
+  @media (max-width: 768px) {
+    .fixed-message {
+        position: static; 
+    }
+}
