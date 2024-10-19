@@ -1,8 +1,8 @@
 import { Productos } from "../components/api";
 
 export const ENV = {
-  SERVER_HOST:'http://localhost:1337',
-  API_URL: 'http://localhost:1337/api',
+  SERVER_HOST:'https://icandye-commercestrapi-production.up.railway.app/',
+  API_URL: 'https://icandye-commercestrapi-production.up.railway.app/api',
   ENDPOINT: {
       AUTH: {
           REGISTER: "auth/local/register",
