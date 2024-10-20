@@ -12,7 +12,7 @@ import { useState, useRef, useEffect,useContext  } from "react";
 import MobileNavMenu from "../../components/Shared/MobileNavbMenu";
 import { useAuth } from "../../hooks/useAuth";
 import { useCart } from "../../hooks/useCart";
-
+import EnhancedDropdown from './EnhancedDropdown/EnhancedDropdown';
 import { Label } from "semantic-ui-react";
 import "../../css/Navbar.css";
 import "../../css/Search.css";
@@ -32,6 +32,7 @@ const Header = () => {
   const isPhone = useMediaQuery("(max-width: 480px)");
   const { categorias, error } = useContext(CategoriasContext);
   const { marcas, errorMarcas } = useContext(MarcasContext);
+  
   const [showCategoriasDropdown, setShowCategoriasDropdown] = useState(false);
   const [showMarcasDropdown, setShowMarcasDropdown] = useState(false);
   const marcasRef = useRef(null);
@@ -118,51 +119,21 @@ const Header = () => {
                   PRODUCTOS
                 </Link>
               </li> */}
-      <li className="relative" ref={marcasRef}>
-        <span 
-          className="text-pink-600 cursor-pointer"
-          onClick={toggleMarcas}
-        >
-          MARCAS
-        </span>
-        {isMarcasOpen && (
-          <ul className="absolute left-0 bg-white shadow-md rounded-md py-2 mt-2 w-48 z-10">
-            {marcas.data.map((marca) => (
-              <li key={marca.attributes.slug} className="hover:bg-gray-100">
-                <Link 
-                  href={`/Marcas/${marca.attributes.slug}`}
-                  className="block px-4 py-2 text-gray-800 hover:text-pink-600 transition-colors duration-200"
-                >
-                  {marca.attributes.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+    {marcas && marcas.data && (
+          <EnhancedDropdown
+            title="MARCAS"
+            items={marcas.data}
+            baseUrl="/Marcas"
+          />
         )}
-      </li>
 
-      <li className="relative" ref={categoriasRef}>
-        <span 
-          className="text-pink-600 cursor-pointer"
-          onClick={toggleCategorias}
-        >
-          CATEGORIAS
-        </span>
-        {isCategoriasOpen && (
-          <ul className="absolute left-0 bg-white shadow-md rounded-md py-2 mt-2 w-48 z-10">
-            {categorias.data.map((categoria) => (
-              <li key={categoria.attributes.slug} className="hover:bg-gray-100">
-                <Link 
-                  href={`/Categorias/${categoria.attributes.slug}`}
-                  className="block px-4 py-2 text-gray-800 hover:text-pink-600 transition-colors duration-200"
-                >
-                  {categoria.attributes.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+{categorias && categorias.data && (
+          <EnhancedDropdown
+            title="CATEGORIAS"
+            items={categorias.data}
+            baseUrl="/Categorias"
+          />
         )}
-      </li>
                       </ul>
 
             {/* Iconos */}
