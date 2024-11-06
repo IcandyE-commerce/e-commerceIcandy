@@ -190,6 +190,7 @@ const Header = () => {
                 icon={faHeart}
                 className="h-7 lg:h-9 text-black"
               />
+              
               <button onClick={toggleSearch}>
                 <FontAwesomeIcon
                   icon={faSearch}
